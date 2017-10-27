@@ -47,6 +47,6 @@ def find_cool (data)
   end
 end
 
-def organize_schools
-
+def organize_schools(schools)
+  puts schools
 end
