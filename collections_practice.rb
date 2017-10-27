@@ -51,8 +51,7 @@ def organize_schools(schools)
   list_hash = {}
   locations = []
   schools.map do |key, values|
-    locations.push(values.values.reduce(:concat))
-    locations.uniq!
+    locations.push(values.values.reduce(:concat).uniq!)
   end
   locations.map do |i|
     list = schools.select do |key, value|
