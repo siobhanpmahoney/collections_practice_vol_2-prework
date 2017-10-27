@@ -48,5 +48,9 @@ def find_cool (data)
 end
 
 def organize_schools(schools)
-  puts schools
+    schools_invert = schools.invert
+    schools_invert.group_by do |loc|
+        loc[:location]
+        end
+    end
 end
