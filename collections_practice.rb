@@ -57,6 +57,7 @@ def organize_schools(schools)
     list = schools.select do |key, value|
       key if schools[key].values.include?(i)
     end
-    i => list.keys
+    list_hash = Hash.new
+    lish_hash(i) = list.keys
   end
 end
