@@ -58,6 +58,6 @@ def organize_schools(schools)
       key if schools[key].values.include?(i)
     end
     list_hash = Hash.new(0)
-    lish_hash(i) = list.keys
+    lish_hash[i] = list.keys
   end
 end
