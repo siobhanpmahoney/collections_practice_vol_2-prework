@@ -56,8 +56,9 @@ def organize_schools(schools)
   locations.map do |i|
     list = schools.select do |key, value|
       key if schools[key].values.include?(i)
+      list_hash = Hash.new(0)
+      list_hash.merge!(i: list.keys)
     end
-    list_hash = Hash.new(0)
-    list_hash.merge!(i:list.keys)
+    list_hash
   end
 end
