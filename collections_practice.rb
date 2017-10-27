@@ -52,5 +52,7 @@ def organize_schools(schools)
     schools_invert.group_by do |loc|
         loc[:location]
         end
+      end
     end
+  end
 end
