@@ -48,6 +48,7 @@ def find_cool (data)
 end
 
 def organize_schools(schools)
+  list_hash = {}
   locations = []
   schools.map do |key, values|
     locations.push(values.values.reduce(:concat))
@@ -57,6 +58,7 @@ def organize_schools(schools)
     list = schools.select do |key, value|
       key if schools[key].values.include?(i)
     end
-    {i => list.keys}
+    list_hash[i] = list.keys
   end
+  list_hash
 end
