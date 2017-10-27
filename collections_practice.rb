@@ -48,11 +48,15 @@ def find_cool (data)
 end
 
 def organize_schools(schools)
-    schools_invert = schools.invert
-    schools_invert.group_by do |loc|
-        loc[:location]
-        end
-      end
+  locations = []
+  schools.map do |key, values|
+    locations.push(values.values.reduce(:concat))
+    locations.uniq!
+  end
+  locations.map do |i|
+    list = schools.select do |key, value|
+      key if schools[key].values.include?(i)
     end
+    {i => list.keys}
   end
 end
