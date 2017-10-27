@@ -57,6 +57,6 @@ def organize_schools(schools)
     list = schools.select do |key, value|
       key if schools[key].values.include?(i)
     end
-    {i => list.keys[0]}
+    {i => list.keys}
   end
 end
